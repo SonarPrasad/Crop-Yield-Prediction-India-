@@ -1,14 +1,46 @@
-from src.logger import logging
-from src.exception import CustomException
-from src.components.data_ingestion import DataIngestion
-import sys
+from flask import Flask, render_template, request
+from joblib import load
 
-if __name__ == "__main__":
-    logging.info("Execution has started")
+import pandas as pd
 
-    try:
-        data_ingestion = DataIngestion()
-        data_ingestion.initiate_data_ingestion()
+app = Flask(__name__)
 
-    except Exception as e:
-        raise CustomException(e, sys)
+# Load the saved Random Forest model
+loaded_rf_model = load('notebook/model.joblib')
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    if request.method == 'POST':
+        
+        # Extract features from the form data
+        crop = request.form['Crop']
+        season = request.form['Season']
+        state = request.form['State']
+        area = float(request.form['Area'])
+        production = float(request.form['Production'])
+        annual_rainfall = float(request.form['Annual_Rainfall'])
+        fertilizer = float(request.form['Fertilizer'])
+        pesticide = float(request.form['Pesticide'])
+
+        # Prepare the features as a single array
+        features = [[crop, season, state, area, production, annual_rainfall, fertilizer, pesticide]]
+
+        # Convert the features to a pandas DataFrame
+        df = pd.DataFrame(features, columns=['Crop', 'Season', 'State', 'Area', 'Production', 'Annual_Rainfall', 'Fertilizer', 'Pesticide'])
+
+        # Use the loaded Random Forest model to make a prediction
+        prediction = loaded_rf_model.predict(df)
+
+        return render_template('result.html', prediction=prediction)
+    
+
+if __name__ == '__main__':
+    app.run(debug=True)

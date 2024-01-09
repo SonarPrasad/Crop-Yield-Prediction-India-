@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Crop Yield Prediction Result</title>
+</head>
+<body>
+    <div class="prediction-result">
+        <h3 class="accent-color">Crop Yield Prediction Result</h3>
+        <p class="prediction-value">Predicted Yield: {{ prediction }}</p>
+
+        <!-- <ul class="prediction-insights">
+            <li><span class="green-accent">Insight 1:</span> Additional insights or information.</li>
+            <li><span class="green-accent">Insight 2:</span> Additional insights or information.</li>
+        </ul> -->
+    </div>
+</body>
+</html>

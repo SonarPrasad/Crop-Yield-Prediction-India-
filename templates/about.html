@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>About Crop Yield Prediction Project</title>
+</head>
+<body>
+    <div class="prediction-form">
+        <h2 class="accent-color">About Crop Yield Prediction Project</h2>
+        
+        <p>
+            Welcome to the Crop Yield Prediction Project! This project aims to predict crop yields in India based on various factors 
+            such as crop type, season, state, area, production, annual rainfall, fertilizer usage, and pesticide usage.
+        </p>
+        
+        <h3 class="accent-color">Problem Statement:</h3>
+        
+        <p>
+            Farmers face uncertainties in crop yield due to various environmental and agricultural factors. This project addresses 
+            the need for a predictive model that can assist farmers in planning and decision-making regarding crop cultivation.
+        </p>
+        <a class="back-to-index" href="{{ url_for('index') }}">Go Back to Prediction Form</a>
+    </div>
+</body>
+</html>

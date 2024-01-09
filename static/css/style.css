@@ -1,0 +1,167 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/bg.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(26, 138, 13);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  color: #666;
+}
+
+a {
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #272727;
+}
+
+button {
+  background-color: #4a4a4a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.accent-color {
+  color: #f7941e;
+}
+
+.green-accent {
+  color: #67b24c;
+}
+
+.brown-accent {
+  color: #906748;
+}
+
+.prediction-form {
+  margin: 50px auto;
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prediction-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.prediction-form input,
+.prediction-form select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.prediction-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.prediction-result {
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prediction-result h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.prediction-result p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.prediction-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f7941e;
+  margin-bottom: 10px;
+}
+
+.prediction-insights {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.prediction-insights li {
+  margin-bottom: 5px;
+}
+
+.prediction-insights li:before {
+  content: "-";
+  margin-right: 10px;
+}
+
+.prediction-insights li span {
+  font-weight: 500;
+}
+
+.about-link {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: rgb(77, 95, 229);
+  font-weight: bold;
+  background: linear-gradient(to right, #f7941e, #ffffff, #128807);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  background: linear-gradient(to right, #f7941e, #ffffff, #0f5e07);
+}
+
+.back-to-index {
+  margin-top: 20px;
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.back-to-index:hover {
+  color: #004080;
+}
