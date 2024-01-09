@@ -30,14 +30,15 @@ Access the app in your web browser at http://127.0.0.1:5000/
 
 Navigate to the prediction page.
 Fill in the required fields:
-Crop
-Season
-State
-Area
-Production
-Annual_Rainfall
-Fertilizer
+Crop,
+Season,
+State,
+Area,
+Production,
+Annual_Rainfall,
+Fertilizer,
 Pesticide
+
 Click the "Predict Yield" button.
 View the predicted yield.
 ## Contributing
