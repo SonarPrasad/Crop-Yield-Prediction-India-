@@ -38,9 +38,10 @@ def predict():
 
         # Use the loaded Random Forest model to make a prediction
         prediction = loaded_rf_model.predict(df)
+        prediction = round(prediction[0], 4)
 
         return render_template('result.html', prediction=prediction)
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
